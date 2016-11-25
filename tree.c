@@ -11,13 +11,16 @@ void free_tree(struct node*);
 void add_node(struct node*, TYPE);
 
 int main(){
-   struct node* n = init_tree();
+   struct node* bst = init_tree();
+
+   add_node(bst, 12);
+
 
 
    printf("hello\n");
 
 
-   free_tree(n);
+   free_tree(bst);
 
 
 }
@@ -55,6 +58,12 @@ void add_node(struct node * root, TYPE val){
    //add node
    pos->left = create_node(val);
 } 
+
+
+   
+
+
+
 
 void free_tree(struct node* root){
    if(root != 0){
